@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C52397202B25AC5C0033CFA5 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523971F2B25AC5C0033CFA5 /* SignInView.swift */; };
+		C52397222B25AE8A0033CFA5 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52397212B25AE890033CFA5 /* SignUpView.swift */; };
 		C53374EC2AF341EA0080A39D /* MedicalConsultationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53374EB2AF341EA0080A39D /* MedicalConsultationsApp.swift */; };
 		C53374EE2AF341EA0080A39D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53374ED2AF341EA0080A39D /* ContentView.swift */; };
 		C53374F02AF341EA0080A39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C53374EF2AF341EA0080A39D /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C523971F2B25AC5C0033CFA5 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		C52397212B25AE890033CFA5 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		C53374E82AF341EA0080A39D /* MedicalConsultations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicalConsultations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53374EB2AF341EA0080A39D /* MedicalConsultationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalConsultationsApp.swift; sourceTree = "<group>"; };
 		C53374ED2AF341EA0080A39D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				C533750D2AF34DA70080A39D /* HomeView.swift */,
 				C533750F2AF34DC10080A39D /* MyAppointmentsView.swift */,
 				C53375112AF34DF90080A39D /* ScheduleAppointmentView.swift */,
+				C523971F2B25AC5C0033CFA5 /* SignInView.swift */,
+				C52397212B25AE890033CFA5 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,8 +228,10 @@
 				C53374FB2AF348170080A39D /* Specialist.swift in Sources */,
 				C533750E2AF34DA70080A39D /* HomeView.swift in Sources */,
 				C53375022AF34AD70080A39D /* Date+convertToString.swift in Sources */,
+				C52397202B25AC5C0033CFA5 /* SignInView.swift in Sources */,
 				C53375042AF34B510080A39D /* String+convertDateStringToReadableDate.swift in Sources */,
 				C53374EC2AF341EA0080A39D /* MedicalConsultationsApp.swift in Sources */,
+				C52397222B25AE8A0033CFA5 /* SignUpView.swift in Sources */,
 				C533750C2AF34D5D0080A39D /* CancelAppointmentView.swift in Sources */,
 				C53375102AF34DC10080A39D /* MyAppointmentsView.swift in Sources */,
 				C53374FD2AF349140080A39D /* Appointment.swift in Sources */,
