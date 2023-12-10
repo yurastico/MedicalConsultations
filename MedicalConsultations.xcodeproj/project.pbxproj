@@ -30,6 +30,7 @@
 		C53375102AF34DC10080A39D /* MyAppointmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533750F2AF34DC10080A39D /* MyAppointmentsView.swift */; };
 		C53375122AF34DF90080A39D /* ScheduleAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53375112AF34DF90080A39D /* ScheduleAppointmentView.swift */; };
 		C53375152AF34F430080A39D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53375142AF34F430080A39D /* WebService.swift */; };
+		C5D3C1992B2651940061C070 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1982B2651940061C070 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		C533750F2AF34DC10080A39D /* MyAppointmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppointmentsView.swift; sourceTree = "<group>"; };
 		C53375112AF34DF90080A39D /* ScheduleAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAppointmentView.swift; sourceTree = "<group>"; };
 		C53375142AF34F430080A39D /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		C5D3C1982B2651940061C070 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		C53374EA2AF341EA0080A39D /* MedicalConsultations */ = {
 			isa = PBXGroup;
 			children = (
+				C5D3C1972B26517E0061C070 /* ViewModels */,
 				C523972B2B2607840033CFA5 /* Managers */,
 				C53375132AF34E510080A39D /* Services */,
 				C53375052AF34C4C0080A39D /* Views */,
@@ -172,6 +175,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		C5D3C1972B26517E0061C070 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C5D3C1982B2651940061C070 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C52397242B25BE6B0033CFA5 /* Patient.swift in Sources */,
+				C5D3C1992B2651940061C070 /* HomeViewModel.swift in Sources */,
 				C533750A2AF34CD60080A39D /* SpecialistCardView.swift in Sources */,
 				C53374FF2AF349B30080A39D /* ScheduleAppointment.swift in Sources */,
 				C523972A2B2606220033CFA5 /* KeychainHelper.swift in Sources */,

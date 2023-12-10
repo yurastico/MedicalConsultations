@@ -9,8 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let service = WebService()
-    let authManager = AuthenticationManager.shared
+    let viewModel = HomeViewModel()
     @State private var specialists: [Specialist] = []
     
     private func logout() async {
@@ -25,16 +24,7 @@ struct HomeView: View {
         }
     }
     
-    private func getSpecialists() async {
-        do {
-            if let specialists = try await service.getAllSpecialists() {
-                
-                self.specialists = specialists
-            }
-        } catch {
-            print("Ocorreu um erro ao obter os especialistas: \(error)")
-        }
-    }
+    
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -64,7 +54,12 @@ struct HomeView: View {
         .padding(.top)
         .onAppear {
             Task {
-                await getSpecialists()
+                do {
+                    let response = try await viewModel.getSpecialists()
+                    self.specialists = response
+                } catch {
+                    print(error)
+                }
             
             }
         }
