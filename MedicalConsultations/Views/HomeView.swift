@@ -10,10 +10,22 @@ import SwiftUI
 struct HomeView: View {
     
     let service = WebService()
-    
+    let authManager = AuthenticationManager.shared
     @State private var specialists: [Specialist] = []
     
-    func getSpecialists() async {
+    private func logout() async {
+        do {
+            let logoutSuccessful = try await service.logoutPatient()
+            if logoutSuccessful {
+                authManager.removeToken()
+                authManager.removePatientId()
+            }
+        } catch {
+            print("erro no logout \(error)")
+        }
+    }
+    
+    private func getSpecialists() async {
         do {
             if let specialists = try await service.getAllSpecialists() {
                 
@@ -54,6 +66,20 @@ struct HomeView: View {
             Task {
                 await getSpecialists()
             
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    Task {
+                        await logout()
+                    }
+                } label: {
+                    HStack(spacing: 2) {
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
+                        Text("Logout")
+                    }
+                }
             }
         }
     }

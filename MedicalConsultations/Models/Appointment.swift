@@ -14,7 +14,7 @@ struct Appointment: Codable,Identifiable {
     
     enum CodingKeys: String, CodingKey {
         case id
-        case date
+        case date = "data"
         case specialist = "especialista"
     }
 }
