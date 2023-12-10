@@ -10,6 +10,7 @@ import Foundation
 struct HomeViewModel {
     //MARK - Attributes
     let service: HomeServiceable
+    let authService: AuthenticationServiceable
     
     
     let authManager = AuthenticationManager.shared
@@ -17,8 +18,9 @@ struct HomeViewModel {
     
     //MARK - Init
     
-    init(service: HomeServiceable) {
+    init(service: HomeServiceable,authService: AuthenticationServiceable) {
         self.service = service
+        self.authService = authService
     }
     
     //MARK - Class methods
@@ -34,16 +36,16 @@ struct HomeViewModel {
     }
     
     func logout() async {
-        let oldService = WebService()
-        do {
-            let logoutSuccessful = try await oldService.logoutPatient()
-            if logoutSuccessful {
-                authManager.removeToken()
-                authManager.removePatientId()
-            }
-        } catch {
-            print("erro no logout \(error)")
+        let result = await authService.logout()
+        switch result {
+        case .success(_):
+            authManager.removeToken()
+            authManager.removePatientId()
+        case .failure(let error):
+            print(error)
+            
         }
+       
     }
     
 }

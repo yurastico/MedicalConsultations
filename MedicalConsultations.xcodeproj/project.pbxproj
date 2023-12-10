@@ -37,6 +37,8 @@
 		C5D3C1A52B2657F50061C070 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1A42B2657F50061C070 /* HTTPClient.swift */; };
 		C5D3C1A72B265DA50061C070 /* HomeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1A62B265DA50061C070 /* HomeEndpoint.swift */; };
 		C5D3C1A92B265F430061C070 /* HomeNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1A82B265F430061C070 /* HomeNetworkingService.swift */; };
+		C5D3C1AB2B2661E20061C070 /* AuthenticationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1AA2B2661E20061C070 /* AuthenticationEndpoint.swift */; };
+		C5D3C1AD2B2663330061C070 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1AC2B2663330061C070 /* AuthenticationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		C5D3C1A42B2657F50061C070 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		C5D3C1A62B265DA50061C070 /* HomeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpoint.swift; sourceTree = "<group>"; };
 		C5D3C1A82B265F430061C070 /* HomeNetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkingService.swift; sourceTree = "<group>"; };
+		C5D3C1AA2B2661E20061C070 /* AuthenticationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationEndpoint.swift; sourceTree = "<group>"; };
+		C5D3C1AC2B2663330061C070 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				C5D3C1A62B265DA50061C070 /* HomeEndpoint.swift */,
+				C5D3C1AA2B2661E20061C070 /* AuthenticationEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				C5D3C1A82B265F430061C070 /* HomeNetworkingService.swift */,
+				C5D3C1AC2B2663330061C070 /* AuthenticationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -312,9 +318,11 @@
 				C53375152AF34F430080A39D /* WebService.swift in Sources */,
 				C53374EE2AF341EA0080A39D /* ContentView.swift in Sources */,
 				C53375122AF34DF90080A39D /* ScheduleAppointmentView.swift in Sources */,
+				C5D3C1AD2B2663330061C070 /* AuthenticationService.swift in Sources */,
 				C53375082AF34C6F0080A39D /* ButtonView.swift in Sources */,
 				C53374FB2AF348170080A39D /* Specialist.swift in Sources */,
 				C523972D2B2607910033CFA5 /* AuthenticationManager.swift in Sources */,
+				C5D3C1AB2B2661E20061C070 /* AuthenticationEndpoint.swift in Sources */,
 				C5D3C1A32B2656BE0061C070 /* RequestError.swift in Sources */,
 				C533750E2AF34DA70080A39D /* HomeView.swift in Sources */,
 				C5D3C1A72B265DA50061C070 /* HomeEndpoint.swift in Sources */,

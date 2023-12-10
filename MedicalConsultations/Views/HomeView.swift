@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let viewModel = HomeViewModel(service: HomeNetworkingService())
+    let viewModel = HomeViewModel(service: HomeNetworkingService(),authService: AuthenticationService())
     @State private var specialists: [Specialist] = []
     var body: some View {
         ScrollView(showsIndicators: false) {
