@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let viewModel = HomeViewModel()
+    let viewModel = HomeViewModel(service: HomeNetworkingService())
     @State private var specialists: [Specialist] = []
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -40,7 +40,9 @@ struct HomeView: View {
         .onAppear {
             Task {
                 do {
-                    let response = try await viewModel.getSpecialists()
+                    guard let response = try await viewModel.getSpecialists() else {
+                        return 
+                    }
                     self.specialists = response
                 } catch {
                     print(error)

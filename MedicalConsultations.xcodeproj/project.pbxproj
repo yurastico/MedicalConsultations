@@ -36,6 +36,7 @@
 		C5D3C1A32B2656BE0061C070 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1A22B2656BE0061C070 /* RequestError.swift */; };
 		C5D3C1A52B2657F50061C070 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1A42B2657F50061C070 /* HTTPClient.swift */; };
 		C5D3C1A72B265DA50061C070 /* HomeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1A62B265DA50061C070 /* HomeEndpoint.swift */; };
+		C5D3C1A92B265F430061C070 /* HomeNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1A82B265F430061C070 /* HomeNetworkingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		C5D3C1A22B2656BE0061C070 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		C5D3C1A42B2657F50061C070 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		C5D3C1A62B265DA50061C070 /* HomeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpoint.swift; sourceTree = "<group>"; };
+		C5D3C1A82B265F430061C070 /* HomeNetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 		C5D3C19D2B26553B0061C070 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C5D3C1A82B265F430061C070 /* HomeNetworkingService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				C533750E2AF34DA70080A39D /* HomeView.swift in Sources */,
 				C5D3C1A72B265DA50061C070 /* HomeEndpoint.swift in Sources */,
 				C52397282B25CE170033CFA5 /* UserDefaultsHelper.swift in Sources */,
+				C5D3C1A92B265F430061C070 /* HomeNetworkingService.swift in Sources */,
 				C53375022AF34AD70080A39D /* Date+convertToString.swift in Sources */,
 				C52397202B25AC5C0033CFA5 /* SignInView.swift in Sources */,
 				C53375042AF34B510080A39D /* String+convertDateStringToReadableDate.swift in Sources */,
