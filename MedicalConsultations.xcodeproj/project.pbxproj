@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C52397202B25AC5C0033CFA5 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523971F2B25AC5C0033CFA5 /* SignInView.swift */; };
 		C52397222B25AE8A0033CFA5 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52397212B25AE890033CFA5 /* SignUpView.swift */; };
+		C52397242B25BE6B0033CFA5 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52397232B25BE6B0033CFA5 /* Patient.swift */; };
 		C53374EC2AF341EA0080A39D /* MedicalConsultationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53374EB2AF341EA0080A39D /* MedicalConsultationsApp.swift */; };
 		C53374EE2AF341EA0080A39D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53374ED2AF341EA0080A39D /* ContentView.swift */; };
 		C53374F02AF341EA0080A39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C53374EF2AF341EA0080A39D /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		C523971F2B25AC5C0033CFA5 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		C52397212B25AE890033CFA5 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C52397232B25BE6B0033CFA5 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		C53374E82AF341EA0080A39D /* MedicalConsultations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicalConsultations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C53374EB2AF341EA0080A39D /* MedicalConsultationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalConsultationsApp.swift; sourceTree = "<group>"; };
 		C53374ED2AF341EA0080A39D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				C53375112AF34DF90080A39D /* ScheduleAppointmentView.swift */,
 				C523971F2B25AC5C0033CFA5 /* SignInView.swift */,
 				C52397212B25AE890033CFA5 /* SignUpView.swift */,
+				C52397232B25BE6B0033CFA5 /* Patient.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52397242B25BE6B0033CFA5 /* Patient.swift in Sources */,
 				C533750A2AF34CD60080A39D /* SpecialistCardView.swift in Sources */,
 				C53374FF2AF349B30080A39D /* ScheduleAppointment.swift in Sources */,
 				C53375152AF34F430080A39D /* WebService.swift in Sources */,

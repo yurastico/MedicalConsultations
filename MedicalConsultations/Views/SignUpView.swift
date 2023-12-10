@@ -9,12 +9,17 @@ import SwiftUI
 
 struct SignUpView: View {
     
+    let service = WebService()
+    
     @State private var name = ""
     @State private var email = ""
     @State private var cpf = ""
     @State private var phone = ""
     @State private var healthPlan: String
     @State private var password = ""
+    @State private var showAlert = false
+    @State private var isPatientRegistered = false
+    @State private var navigateToSignInView = false
     
     let healthPlans: [String] = [
     "Amil", "Unimed", "Bradesco Saúde", "SulAmérica", "Hapvida", "Notredame Intermédica", "São Francisco Saúde", "Golden Cross", "Medial Saúde", "América Saúde", "Outro"
@@ -22,6 +27,22 @@ struct SignUpView: View {
     
     init() {
         self.healthPlan = healthPlans[0]
+    }
+    
+    private func register() async {
+        let patient = Patient(id: nil, cpf: cpf, name: name, phoneNumber: phone, password: password, email: email, healthPlan: healthPlan)
+        do {
+            if let _ = try await service.registerPatient(patient: patient) {
+                isPatientRegistered = true
+               
+            } else {
+                isPatientRegistered = false
+            }
+        } catch(let error) {
+            isPatientRegistered = false
+            print(error)
+        }
+        showAlert = true
     }
     
     var body: some View {
@@ -112,7 +133,9 @@ struct SignUpView: View {
                 }
                 
                 Button {
-                    
+                    Task {
+                        await register()
+                    }
                 } label: {
                     ButtonView(text: "Cadastrar")
                 }
@@ -130,6 +153,22 @@ struct SignUpView: View {
         }
         .navigationBarBackButtonHidden()
         .padding()
+        .alert(isPatientRegistered ? "Sucesso!" : "Ops... algo deu errado!",isPresented: $showAlert,presenting: $isPatientRegistered) { _ in
+            Button {
+                navigateToSignInView = true
+            } label: {
+                Text("Ok")
+            }
+        } message: { _ in
+            if isPatientRegistered {
+                Text("O paciente foi criado com sucesso!")
+            } else {
+                Text("houve um erro ao cadastrar um paciente!")
+            }
+        }
+        .navigationDestination(isPresented: $navigateToSignInView) {
+            SignInView()
+        }
         
         
     }
