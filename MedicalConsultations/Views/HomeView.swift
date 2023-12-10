@@ -11,21 +11,6 @@ struct HomeView: View {
     
     let viewModel = HomeViewModel()
     @State private var specialists: [Specialist] = []
-    
-    private func logout() async {
-        do {
-            let logoutSuccessful = try await service.logoutPatient()
-            if logoutSuccessful {
-                authManager.removeToken()
-                authManager.removePatientId()
-            }
-        } catch {
-            print("erro no logout \(error)")
-        }
-    }
-    
-    
-    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
@@ -67,7 +52,7 @@ struct HomeView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
                     Task {
-                        await logout()
+                        await viewModel.logout()
                     }
                 } label: {
                     HStack(spacing: 2) {
