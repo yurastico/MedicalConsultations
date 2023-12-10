@@ -31,6 +31,7 @@
 		C53375122AF34DF90080A39D /* ScheduleAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53375112AF34DF90080A39D /* ScheduleAppointmentView.swift */; };
 		C53375152AF34F430080A39D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53375142AF34F430080A39D /* WebService.swift */; };
 		C5D3C1992B2651940061C070 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1982B2651940061C070 /* HomeViewModel.swift */; };
+		C5D3C19F2B2655600061C070 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C19E2B2655600061C070 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		C53375112AF34DF90080A39D /* ScheduleAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAppointmentView.swift; sourceTree = "<group>"; };
 		C53375142AF34F430080A39D /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		C5D3C1982B2651940061C070 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		C5D3C19E2B2655600061C070 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		C53374EA2AF341EA0080A39D /* MedicalConsultations */ = {
 			isa = PBXGroup;
 			children = (
+				C5D3C19A2B26551B0061C070 /* Networking */,
 				C5D3C1972B26517E0061C070 /* ViewModels */,
 				C523972B2B2607840033CFA5 /* Managers */,
 				C53375132AF34E510080A39D /* Services */,
@@ -181,6 +184,38 @@
 				C5D3C1982B2651940061C070 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C5D3C19A2B26551B0061C070 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C5D3C19D2B26553B0061C070 /* Services */,
+				C5D3C19C2B2655360061C070 /* Endpoints */,
+				C5D3C19B2B2655330061C070 /* Base */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C5D3C19B2B2655330061C070 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C5D3C19E2B2655600061C070 /* Endpoint.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C5D3C19C2B2655360061C070 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		C5D3C19D2B26553B0061C070 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +305,7 @@
 				C52397202B25AC5C0033CFA5 /* SignInView.swift in Sources */,
 				C53375042AF34B510080A39D /* String+convertDateStringToReadableDate.swift in Sources */,
 				C53374EC2AF341EA0080A39D /* MedicalConsultationsApp.swift in Sources */,
+				C5D3C19F2B2655600061C070 /* Endpoint.swift in Sources */,
 				C52397222B25AE8A0033CFA5 /* SignUpView.swift in Sources */,
 				C533750C2AF34D5D0080A39D /* CancelAppointmentView.swift in Sources */,
 				C52397262B25CA870033CFA5 /* Login.swift in Sources */,
