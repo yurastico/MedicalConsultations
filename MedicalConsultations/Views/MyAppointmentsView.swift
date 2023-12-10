@@ -10,10 +10,13 @@ import SwiftUI
 struct MyAppointmentsView: View {
     
     let service = WebService()
-    
+    let authManager = AuthenticationManager.shared
     @State private var appointments: [Appointment] = []
     
     func getAllAppointments() async {
+        guard let patientID = authManager.patientId else {
+            return
+        }
         do {
             if let appointments = try await service.getAllAppointmentsFromPatient(patientID: patientID) {
                 self.appointments = appointments

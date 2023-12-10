@@ -19,6 +19,7 @@ struct CancelAppointmentView: View {
     func cancelAppointment() async {
         do {
             isAppointmentCancelled = try await service.cancelAppointment(appointmentID: appointmentID, reasonToCancel: reasonToCancel)
+            print(isAppointmentCancelled)
         } catch {
             print("Ocorreu um erro ao desmarcar a consulta: \(error)")
             isAppointmentCancelled = false

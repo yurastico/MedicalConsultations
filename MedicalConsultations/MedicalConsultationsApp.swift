@@ -11,9 +11,7 @@ import SwiftUI
 struct MedicalConsultationsApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                SignInView()
-            }
+           ContentView()
         }
     }
 }

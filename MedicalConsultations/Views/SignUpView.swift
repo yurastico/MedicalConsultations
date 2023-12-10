@@ -105,7 +105,7 @@ struct SignUpView: View {
                     .bold()
                     .foregroundStyle(.accent)
                 
-                TextField("Insira seu Telefone",text: $cpf)
+                TextField("Insira seu Telefone",text: $phone)
                     .padding(14)
                     .background(Color.gray.opacity(0.25))
                     .clipShape(RoundedRectangle(cornerRadius: 14))

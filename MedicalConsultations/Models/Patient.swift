@@ -21,7 +21,7 @@ struct Patient: Identifiable,Codable {
         case cpf
         case name = "nome"
         case email
-        case password
+        case password = "senha"
         case phoneNumber = "telefone"
         case healthPlan = "planoSaude"
     }
