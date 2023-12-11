@@ -30,6 +30,7 @@
 		C53375102AF34DC10080A39D /* MyAppointmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533750F2AF34DC10080A39D /* MyAppointmentsView.swift */; };
 		C53375122AF34DF90080A39D /* ScheduleAppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53375112AF34DF90080A39D /* ScheduleAppointmentView.swift */; };
 		C53375152AF34F430080A39D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53375142AF34F430080A39D /* WebService.swift */; };
+		C5774B5E2B26EF010089DA4A /* SnackBarErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5774B5D2B26EF010089DA4A /* SnackBarErrorView.swift */; };
 		C5D3C1992B2651940061C070 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1982B2651940061C070 /* HomeViewModel.swift */; };
 		C5D3C19F2B2655600061C070 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C19E2B2655600061C070 /* Endpoint.swift */; };
 		C5D3C1A12B26565F0061C070 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1A02B26565F0061C070 /* RequestMethod.swift */; };
@@ -66,6 +67,7 @@
 		C533750F2AF34DC10080A39D /* MyAppointmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppointmentsView.swift; sourceTree = "<group>"; };
 		C53375112AF34DF90080A39D /* ScheduleAppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAppointmentView.swift; sourceTree = "<group>"; };
 		C53375142AF34F430080A39D /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		C5774B5D2B26EF010089DA4A /* SnackBarErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarErrorView.swift; sourceTree = "<group>"; };
 		C5D3C1982B2651940061C070 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C5D3C19E2B2655600061C070 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C5D3C1A02B26565F0061C070 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		C53375052AF34C4C0080A39D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C5774B5C2B26EEEA0089DA4A /* SnackBarView */,
 				C53375062AF34C500080A39D /* Components */,
 				C533750B2AF34D5D0080A39D /* CancelAppointmentView.swift */,
 				C533750D2AF34DA70080A39D /* HomeView.swift */,
@@ -190,6 +193,14 @@
 				C52397292B2606220033CFA5 /* KeychainHelper.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		C5774B5C2B26EEEA0089DA4A /* SnackBarView */ = {
+			isa = PBXGroup;
+			children = (
+				C5774B5D2B26EF010089DA4A /* SnackBarErrorView.swift */,
+			);
+			path = SnackBarView;
 			sourceTree = "<group>";
 		};
 		C5D3C1972B26517E0061C070 /* ViewModels */ = {
@@ -321,6 +332,7 @@
 				C5D3C1AD2B2663330061C070 /* AuthenticationService.swift in Sources */,
 				C53375082AF34C6F0080A39D /* ButtonView.swift in Sources */,
 				C53374FB2AF348170080A39D /* Specialist.swift in Sources */,
+				C5774B5E2B26EF010089DA4A /* SnackBarErrorView.swift in Sources */,
 				C523972D2B2607910033CFA5 /* AuthenticationManager.swift in Sources */,
 				C5D3C1AB2B2661E20061C070 /* AuthenticationEndpoint.swift in Sources */,
 				C5D3C1A32B2656BE0061C070 /* RequestError.swift in Sources */,

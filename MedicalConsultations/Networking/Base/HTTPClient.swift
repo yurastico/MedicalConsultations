@@ -13,13 +13,21 @@ protocol HTTPClient {
 
 extension HTTPClient {
     func sendRequest<T: Decodable>(endpoint: Endpoint,responseModel: T.Type?) async -> Result<T?,RequestError> {
-        var urlComponents = URLComponents()
-        urlComponents.scheme = endpoint.schema
-        urlComponents.host = endpoint.host
-        urlComponents.path = endpoint.path
-        urlComponents.port = 3000 // nao ta no endpoint pq eh local, quando rodar em alguma aplicacao em prod, nao precisara disso
+//        var urlComponents = URLComponents()
+//        urlComponents.scheme = endpoint.schema
+//        urlComponents.host = endpoint.host
+//        urlComponents.path = endpoint.path
+//        urlComponents.port = 3000 // nao ta no endpoint pq eh local, quando rodar em alguma aplicacao em prod, nao precisara disso
+//       
         
-        guard let url = urlComponents.url else {
+//        guard let url = urlComponents.url else {
+//            return .failure(.invalidURL)
+//        }
+        
+        let urlApiary = "https://private-7815e6-vollmed.apiary-mock.com/specialists"
+       
+        
+        guard let url = URL(string: urlApiary) else {
             return .failure(.invalidURL)
         }
         
@@ -48,6 +56,9 @@ extension HTTPClient {
                 }
                 
                 return .success(decodedResponse)
+            case 400:
+                let errorResponse = try? JSONSerialization.jsonObject(with: data) as? [String: Any]
+                return .failure(.custom(errorResponse))
             case 401:
                 return .failure(.notAuthorized)
             

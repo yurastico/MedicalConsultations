@@ -13,7 +13,7 @@ enum RequestError: Error {
     case noResponse
     case notAuthorized
     case unknown
-    case custom(_ error: [String: Any])
+    case custom(_ error: [String: Any]?)
     
     
     var customMessage: String {
