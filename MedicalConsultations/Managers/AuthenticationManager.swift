@@ -25,26 +25,34 @@ final class AuthenticationManager: ObservableObject { //usar observable!!!!
     func saveToken(token: String) {
         Task {
             KeychainHelper.save(value: token, key: AuthenticationManager.tokenKey)
-            self.token = token
+            DispatchQueue.main.async {
+                self.token = token
+            }
         }
     }
     
     func removeToken() {
         Task {
             KeychainHelper.remove(for: AuthenticationManager.tokenKey)
-            self.token = nil
+            DispatchQueue.main.async {
+                self.token = nil
+            }
         }
     }
     
     func savePatientId(id: String) {
         Task {
             KeychainHelper.save(value: id, key: AuthenticationManager.patientIdKey)
-            self.patientId = id
+            DispatchQueue.main.async {
+                self.patientId = id
+            }
         }
     }
     
     func removePatientId() {
         KeychainHelper.remove(for: AuthenticationManager.patientIdKey)
-        self.patientId = nil
+        DispatchQueue.main.async {
+            self.patientId = nil
+        }
     }
 }

@@ -13,6 +13,7 @@ struct HomeView: View {
     @State private var specialists: [Specialist] = []
     @State private var isShowingSnackBar = false
     @State private var errorMessage = ""
+    @State private var isFetchingData = true
     var body: some View {
         ZStack {
             ScrollView(showsIndicators: false) {
@@ -32,9 +33,13 @@ struct HomeView: View {
                         .foregroundStyle(Color.accentColor)
                         .multilineTextAlignment(.center)
                         .padding(.vertical, 16)
-                    ForEach(specialists) { specialist in
-                        SpecialistCardView(specialist: specialist)
-                            .padding(.bottom, 8)
+                    if isFetchingData {
+                        SkeletonView()
+                    } else {
+                        ForEach(specialists) { specialist in
+                            SpecialistCardView(specialist: specialist)
+                                .padding(.bottom, 8)
+                        }
                     }
                 }
                 .padding(.horizontal)
@@ -43,6 +48,7 @@ struct HomeView: View {
             .onAppear {
                 Task {
                     do {
+                        isFetchingData = false
                         guard let response = try await viewModel.getSpecialists() else {
                             return
                         }

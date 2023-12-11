@@ -32,6 +32,8 @@
 		C53375152AF34F430080A39D /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53375142AF34F430080A39D /* WebService.swift */; };
 		C5774B5E2B26EF010089DA4A /* SnackBarErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5774B5D2B26EF010089DA4A /* SnackBarErrorView.swift */; };
 		C5774B602B26F44B0089DA4A /* UIApplication+getKeyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5774B5F2B26F44B0089DA4A /* UIApplication+getKeyWindow.swift */; };
+		C5774B632B26F6080089DA4A /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5774B622B26F6080089DA4A /* SkeletonView.swift */; };
+		C5774B652B26FF880089DA4A /* RedectedAnimationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5774B642B26FF880089DA4A /* RedectedAnimationModifier.swift */; };
 		C5D3C1992B2651940061C070 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1982B2651940061C070 /* HomeViewModel.swift */; };
 		C5D3C19F2B2655600061C070 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C19E2B2655600061C070 /* Endpoint.swift */; };
 		C5D3C1A12B26565F0061C070 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3C1A02B26565F0061C070 /* RequestMethod.swift */; };
@@ -70,6 +72,8 @@
 		C53375142AF34F430080A39D /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		C5774B5D2B26EF010089DA4A /* SnackBarErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarErrorView.swift; sourceTree = "<group>"; };
 		C5774B5F2B26F44B0089DA4A /* UIApplication+getKeyWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+getKeyWindow.swift"; sourceTree = "<group>"; };
+		C5774B622B26F6080089DA4A /* SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonView.swift; sourceTree = "<group>"; };
+		C5774B642B26FF880089DA4A /* RedectedAnimationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedectedAnimationModifier.swift; sourceTree = "<group>"; };
 		C5D3C1982B2651940061C070 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C5D3C19E2B2655600061C070 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C5D3C1A02B26565F0061C070 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				C53375012AF34AD70080A39D /* Date+convertToString.swift */,
 				C53375032AF34B510080A39D /* String+convertDateStringToReadableDate.swift */,
 				C5774B5F2B26F44B0089DA4A /* UIApplication+getKeyWindow.swift */,
+				C5774B642B26FF880089DA4A /* RedectedAnimationModifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 		C53375052AF34C4C0080A39D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C5774B612B26F5FC0089DA4A /* Skeleton */,
 				C5774B5C2B26EEEA0089DA4A /* SnackBarView */,
 				C53375062AF34C500080A39D /* Components */,
 				C533750B2AF34D5D0080A39D /* CancelAppointmentView.swift */,
@@ -204,6 +210,14 @@
 				C5774B5D2B26EF010089DA4A /* SnackBarErrorView.swift */,
 			);
 			path = SnackBarView;
+			sourceTree = "<group>";
+		};
+		C5774B612B26F5FC0089DA4A /* Skeleton */ = {
+			isa = PBXGroup;
+			children = (
+				C5774B622B26F6080089DA4A /* SkeletonView.swift */,
+			);
+			path = Skeleton;
 			sourceTree = "<group>";
 		};
 		C5D3C1972B26517E0061C070 /* ViewModels */ = {
@@ -328,6 +342,7 @@
 				C5D3C1A52B2657F50061C070 /* HTTPClient.swift in Sources */,
 				C533750A2AF34CD60080A39D /* SpecialistCardView.swift in Sources */,
 				C53374FF2AF349B30080A39D /* ScheduleAppointment.swift in Sources */,
+				C5774B632B26F6080089DA4A /* SkeletonView.swift in Sources */,
 				C523972A2B2606220033CFA5 /* KeychainHelper.swift in Sources */,
 				C53375152AF34F430080A39D /* WebService.swift in Sources */,
 				C53374EE2AF341EA0080A39D /* ContentView.swift in Sources */,
@@ -339,6 +354,7 @@
 				C523972D2B2607910033CFA5 /* AuthenticationManager.swift in Sources */,
 				C5D3C1AB2B2661E20061C070 /* AuthenticationEndpoint.swift in Sources */,
 				C5D3C1A32B2656BE0061C070 /* RequestError.swift in Sources */,
+				C5774B652B26FF880089DA4A /* RedectedAnimationModifier.swift in Sources */,
 				C533750E2AF34DA70080A39D /* HomeView.swift in Sources */,
 				C5D3C1A72B265DA50061C070 /* HomeEndpoint.swift in Sources */,
 				C5774B602B26F44B0089DA4A /* UIApplication+getKeyWindow.swift in Sources */,
