@@ -19,9 +19,20 @@ struct SnackBarErrorView: View {
                     .background(Color.red)
                     .foregroundStyle(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .transition(.move(edge: .bottom))
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            withAnimation {
+                                isShowing = false
+                            }
+                        }
+                    }
                 
             }
         }
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal)
+        .padding(.bottom, isShowing ? UIApplication.shared.getKeyWindow?.safeAreaInsets.bottom ?? 0 : -100)
     }
 }
 

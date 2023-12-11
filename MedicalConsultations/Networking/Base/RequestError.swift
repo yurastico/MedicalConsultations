@@ -28,8 +28,12 @@ enum RequestError: Error {
             return "usuario nao autorizado"
         case .unknown:
             return "erro desconhecido"
-        case .custom(_):
-            return "erro:"
+        case .custom(let errorData):
+            if let jsonError = errorData?["error"] as? [String: Any] {
+                let message = jsonError["mensagem"] as? String ?? "Erro desconhecido"
+                return message
+            }
+            return "Ops, ocorreu um erro ao carregar"
 //        default:
 //            return "erro desconhecido"
         }

@@ -13,23 +13,23 @@ protocol HTTPClient {
 
 extension HTTPClient {
     func sendRequest<T: Decodable>(endpoint: Endpoint,responseModel: T.Type?) async -> Result<T?,RequestError> {
-//        var urlComponents = URLComponents()
-//        urlComponents.scheme = endpoint.schema
-//        urlComponents.host = endpoint.host
-//        urlComponents.path = endpoint.path
-//        urlComponents.port = 3000 // nao ta no endpoint pq eh local, quando rodar em alguma aplicacao em prod, nao precisara disso
-//       
-        
-//        guard let url = urlComponents.url else {
-//            return .failure(.invalidURL)
-//        }
-        
-        let urlApiary = "https://private-7815e6-vollmed.apiary-mock.com/specialists"
+        var urlComponents = URLComponents()
+        urlComponents.scheme = endpoint.schema
+        urlComponents.host = endpoint.host
+        urlComponents.path = endpoint.path
+        urlComponents.port = 3000 // nao ta no endpoint pq eh local, quando rodar em alguma aplicacao em prod, nao precisara disso
        
         
-        guard let url = URL(string: urlApiary) else {
+        guard let url = urlComponents.url else {
             return .failure(.invalidURL)
         }
+        
+//        let urlApiary = "https://private-7815e6-vollmed.apiary-mock.com/specialists"
+//       
+//        
+//        guard let url = URL(string: urlApiary) else {
+//            return .failure(.invalidURL)
+//        }
         
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method.rawValue
